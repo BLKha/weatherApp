@@ -8,6 +8,9 @@
 body{
     background: #222;
 }
+.header{
+    text-align: left;
+}
 .card{
     width: 90%;
     max-width: 470px;
@@ -23,18 +26,34 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
-.search input{
+.search  input{
     border: none;
     outline: none;
     background: #ebfffc;
     color: #555;
     padding: 10px 25px;
+    width: auto;
     height: 60px;
     border-radius: 30px;
     flex: 1;
     margin-right: 16px;
     font-size: 18px;
+}
+.input-container{
+   position: relative;
+}
+.search .clear-icon{
+    position: absolute;
+    top: 30%;
+    right: 27px;
+    cursor: pointer;
+    color: #808080;
+    display: none;
+}
+.input-container input:not(:placeholder-shown)+ .clear-icon{
+    display: inline;
 }
 .search button{
     border: 0;
@@ -85,4 +104,14 @@ body{
 }
 .status-name {
     color: rgb(1, 236, 68);
+}
+.weather{
+    display: none;
+}
+.error{
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #c5c5c5;
+    display: none;
 }
